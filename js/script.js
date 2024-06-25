@@ -15,6 +15,9 @@ createApp({
         // { id: 5, name: 'Marvel\'s Avengers', immage: 'img/05.webp', text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.'}
         
     //   ]
+        
+        // Dichiarazione di indicizazione dell IMG
+        indexImg: 0,
 
         slides: {
             immages: [
@@ -30,7 +33,24 @@ createApp({
                 'Fortnite',
                 'Stray',
                 'Marvel\'s Avengers'
+            ],
+            description: [
+                
             ]
+        }
+    }
+  },
+
+  //Funzioni Vue per prev e next.
+  methods: {
+    // Dichiarazione funzione per Next
+    next(){
+        this.indexImg++;
+
+        console.log('ok1');
+
+        if (this.indexImg > this.slides.immages.length - 1 ) {
+           this.indexImg = 0;
         }
     }
   }

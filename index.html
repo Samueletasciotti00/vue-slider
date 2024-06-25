@@ -17,10 +17,10 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img :src="slides.immages[0]" :alt="slides.names[0]" />
+                    <img :src="slides.immages[indexImg]" :alt="slides.names[indexImg]" />
                     <div class="text">
                         <h3>Spiderman</h3>
-                        <p v-html="slides.names[0]">
+                        <p v-html="slides.names[indexImg]">
                             
                         </p>
                     </div>
@@ -28,7 +28,7 @@
 
                 <div class="thumbs">
                     <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="next" @click="next"></div>
                     <div class="thumb active">
                         <img src="img/01.webp" alt="Svezia" />
                     </div>
